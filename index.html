@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asad News | تازہ خبریں</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f2f4;
+  color: #222;
+}
+header {
+  background: #b50000;
+  color: white;
+  text-align: center;
+  padding: 25px 10px;
+}
+header h1 {
+  font-size: 38px;
+  margin: 0 0 8px;
+}
+header p {
+  margin: 0;
+}
+nav {
+  background: #181818;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  gap: 25px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #ff4444;
+}
+.breaking {
+  background: #e21b1b;
+  color: white;
+  padding: 13px;
+  text-align: center;
+  font-weight: bold;
+}
+.container {
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 0 15px;
+}
+.section-title {
+  border-right: 5px solid #c00000;
+  padding-right: 12px;
+  margin: 30px 0 18px;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+}
+.card {
+  background: white;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px #00000012;
+  margin-bottom: 18px;
+}
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 17px;
+}
+.card h2, .card h3 {
+  margin-top: 0;
+}
+.category {
+  color: #c00000;
+  font-weight: bold;
+}
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.search {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0;
+}
+.search input {
+  flex: 1;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.search button {
+  background: #b50000;
+  color: white;
+  border: 0;
+  padding: 12px 22px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+footer {
+  background: #181818;
+  color: white;
+  text-align: center;
+  padding: 28px 12px;
+  margin-top: 35px;
+}
+footer a {
+  color: white;
+  margin: 8px;
+}
+@media(max-width:700px) {
+  .hero, .news-grid {
+    grid-template-columns: 1fr;
+  }
+  header h1 {
+    font-size: 30px;
+  }
+  nav {
+    gap: 15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>اسد نیوز</h1>
+  <p>پاکستان اور دنیا کی تازہ خبریں</p>
+</header>
+
+<nav>
+  <a href="#home">ہوم</a>
+  <a href="#pakistan">پاکستان</a>
+  <a href="#world">دنیا</a>
+  <a href="#sports">کھیل</a>
+  <a href="#technology">ٹیکنالوجی</a>
+  <a href="#contact">رابطہ</a>
+</nav>
+
+<div class="breaking">
+  بریکنگ نیوز | اسد نیوز میں خوش آمدید
+</div>
+
+<main class="container" id="home">
+
+  <div class="search">
+    <input type="text" id="searchInput"
+    placeholder="خبر تلاش کریں...">
+    <button onclick="searchNews()">تلاش کریں</button>
+  </div>
+
+  <h2 class="section-title">اہم خبریں</h2>
+
+  <section class="hero">
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=900"
+      alt="اخبار">
+      <div class="card-content">
+        <span class="category">اہم خبر</span>
+        <h2>اسد نیوز کی پہلی بڑی خبر</h2>
+        <p>یہاں اپنی اہم خبر کی مکمل تفصیل لکھیں۔</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?w=700"
+      alt="نیوز">
+      <div class="card-content">
+        <span class="category">تازہ خبر</span>
+        <h3>دنیا بھر کی خبریں</h3>
+        <p>یہاں دنیا کی خبروں کی تفصیل لکھیں۔</p>
+      </div>
+    </article>
+
+  </section>
+
+  <h2 class="section-title" id="pakistan">پاکستان کی خبریں</h2>
+  <section class="news-grid">
+
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=700"
+      alt="پاکستان">
+      <div class="card-content">
+        <span class="category">پاکستان</span>
+        <h3>پاکستان کی اہم خبریں</h3>
+        <p>یہاں پاکستان کی خبر لکھیں۔</p>
+      </div>
+    </article>
+
+    <article class="card" id="world">
+      <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700"
+      alt="دنیا">
+      <div class="card-content">
+        <span class="category">دنیا</span>
+        <h3>دنیا کی تازہ خبریں</h3>
+        <p>یہاں دنیا کی خبر لکھیں۔</p>
+      </div>
+    </article>
+
+    <article class="card" id="sports">
+      <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=700"
+      alt="کھیل">
+      <div class="card-content">
+        <span class="category">کھیل</span>
+        <h3>کھیلوں کی خبریں</h3>
+        <p>یہاں کھیلوں کی خبر لکھیں۔</p>
+      </div>
+    </article>
+
+  </section>
+
+  <h2 class="section-title" id="technology">ٹیکنالوجی</h2>
+  <section class="news-grid">
+    <article class="card">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700"
+      alt="ٹیکنالوجی">
+      <div class="card-content">
+        <span class="category">ٹیکنالوجی</span>
+        <h3>ٹیکنالوجی کی نئی دنیا</h3>
+        <p>یہاں ٹیکنالوجی کی خبر لکھیں۔</p>
+      </div>
+    </article>
+  </section>
+
+  <p id="noResults" style="display:none;text-align:center">
+    کوئی خبر نہیں ملی۔
+  </p>
+
+</main>
+
+<footer id="contact">
+  <h2>اسد نیوز</h2>
+  <p>آپ کی خبروں کا قابل اعتماد پلیٹ فارم</p>
+  <p>رابطہ: اپنا ای میل یہاں لکھیں</p>
+  <p>© 2026 Asad News - All Rights Reserved</p>
+</footer>
+
+<script>
+function searchNews() {
+  let input = document.getElementById("searchInput")
+    .value.toLowerCase();
+
+  let cards = document.querySelectorAll(".card");
+  let found = 0;
+
+  cards.forEach(function(card) {
+    let match = card.innerText.toLowerCase().includes(input);
+    card.style.display = match ? "" : "none";
+    if(match) found++;
+  });
+
+  document.getElementById("noResults").style.display =
+    found === 0 ? "block" : "none";
+}
+</script>
+
+</body>
+</html>
